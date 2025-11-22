@@ -39,11 +39,23 @@
       <button onclick="changeColor()">Change Color</button>
     </div>
     <script>
+
+      let color=["red","green","blue"];
+
       function changeColor() {
-        let randomColor =
-          "#" + Math.floor(Math.random() * 16777215).toString(16);
-        document.body.style.backgroundColor = randomColor;
+      
+  let randomColor =
+           Math.floor(Math.random() * color.length);
+        document.body.style.backgroundColor = color[randomColor];
+        
+
+     
+      
       }
-    </script>
+
+      setInterval(changeColor,2000)
+
+
+    </script
   </body>
 </html>
